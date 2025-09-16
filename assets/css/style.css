@@ -1,0 +1,145 @@
+#board{
+    margin: 0;
+    padding: 0.707% 0;
+}
+
+.hex {
+  width: 100px;
+  height: 57.74px; /* calculé à 100 * 0.5774 */
+  background: rgb(88, 78, 68);
+  position: relative;
+  transform: rotate(90deg);
+  margin-top:20%;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.hex:hover{
+  cursor: pointer;
+  background-color: aliceblue;
+}
+
+.hex::before {
+  content: "";
+  position: absolute;
+  top: -28.87px; /* calculé à 57.74 / 2 */
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent; /* 100 / 2 */
+  border-right: 50px solid transparent; /* 100 / 2 */
+  border-bottom: 28.87px solid rgb(88, 78, 68);
+}
+
+
+.hex::after {
+  content: "";
+  position: absolute;
+  bottom: -28.87px; /* calculé à 57.74 / 2 */
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent; /* 100 / 2 */
+  border-right: 50px solid transparent; /* 100 / 2 */
+  border-top: 28.87px solid rgb(88, 78, 68);
+}
+
+.impair{
+  margin-bottom:14%;
+}
+
+.circle{
+  width: 250px;
+  height:250px;
+  border-width: 5px;
+  border-color: rgb(88, 78, 68);
+  border-radius: 50%;
+  background-color: rgb(248, 244, 240);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 15%;
+  padding: 8%;
+  
+}
+
+.circle:hover{
+  cursor: pointer;
+  background-color: aquamarine;
+}
+
+.blueToken{
+  width: 50px;
+  height:50px;
+  border-width: 3px;
+  border-color: rgb(88, 78, 68);
+  border-radius: 50%;
+  background-color: rgb(45, 117, 175);
+}
+
+.greyToken{
+  width: 50px;
+  height:50px;
+  border-width: 3px;
+  border-color: rgb(88, 78, 68);
+  border-radius: 50%;
+  background-color: rgb(128, 133, 138);
+}
+
+.brownToken{
+  width: 50px;
+  height:50px;
+  border-width: 3px;
+  border-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  background-color: rgb(97, 65, 46);
+}
+
+.greenToken{
+  width: 50px;
+  height:50px;
+  border-width: 3px;
+  border-color: rgb(88, 78, 68);
+  border-radius: 50%;
+  background-color: rgb(116, 163, 41);
+}
+
+.yellowToken{
+  width: 50px;
+  height:50px;
+  border-width: 3px;
+  border-color: rgb(88, 78, 68);
+  border-radius: 50%;
+  background-color: rgb(231, 235, 25);
+}
+
+.redToken{
+  width: 50px;
+  height:50px;
+  border-width: 3px;
+  border-color: rgb(88, 78, 68);
+  border-radius: 50%;
+  background-color: rgb(201, 36, 36);
+}
+
+#hand > div {
+  transition: transform 0.3s ease-in-out;
+}
+
+#hand > div:hover {
+  transform: translateY(-17px); 
+  cursor: pointer;
+}
+
+.selectedToken{
+  transform: translateY(-17px); 
+}
+
+.card:hover{
+  transform: translateY(-17px); 
+  cursor:pointer
+}

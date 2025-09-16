@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Harmonies</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body
+    class="bg-cover"
+    style="background-image: url(./assets/img/harmonies-cover.jpg)"
+  >
+    <header></header>
+    <main class="mt-8 flex flex-col items-center">
+      <section id="piocheDiv"
+        class="w-[90vw] h-[20vh] bg-[#f2efe6] border-4 border-black mb-8 flex lfe-row justify-center items-center gap-8"
+      ></section>
+      <section class="flex flex-row gap-12">
+        <article
+          class="w-[45vw] h-[50vh] flex justify-center items-center bg-[#f2efe6] border-4 border-black"
+        >
+          <div
+            id="board"
+            class="w-[28vw] h-[50vh] flex flex-wrap items-center justify-center m-4"
+          ></div>
+        </article>
+        <article
+          id="wheel"
+          class="w-[30vw] h-[50vh] flex flex-wrap justify-center items-center bg-[#f2efe6] border-4 border-black gap-16"
+        ></article>
+        <article
+          id="bag"
+          class="w-[15vw] h-[50vh] flex justify-center items-center bg-[#f2efe6] border-4 border-black bg-cover bg-center"
+          style="background-image: url(./assets/img/bag.jpg)"
+        >
+          <p id="inBag" class="text-5xl font-extrabold text-white">120</p>
+        </article>
+      </section>
+      <section class="flex flex-row justify-center items-center gap-10">
+        <article
+          id="handCard"
+          class="w-[70vw] h-[20vh] bg-[#f2efe6] flex flex-row items-center justify-center gap-4 border-4 border-black mt-4"
+        ></article>
+        <article
+          id="hand"
+          class="w-[20vw] h-[20vh] bg-[#f2efe6] flex flex-row items-center justify-center gap-24 border-4 border-black mt-4"
+        ></article>
+      </section>
+    </main>
+    <footer></footer>
+    <script src="./js/board.js"></script>
+    <script src="./js/wheel.js"></script>
+    <script src="./js/play.js"></script>
+    <script src="./js/cards.js"></script>
+  </body>
+</html>
