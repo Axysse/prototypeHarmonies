@@ -1,68 +1,52 @@
 {
-    "cards": [
-        {
-            "id": 0,
-            "name" : "ara",
-            "points": [
-                4, 9, 14
-            ],
-            "img": "ara.png"
-        },
-                {
-            "id": 1,
-            "name" : "canard",
-            "points": [
-                2, 4, 8, 13
-            ],
-            "img": "canard.png"
-        },
-                {
-            "id": 2,
-            "name" : "corbeau",
-            "points": [
-                4, 9
-            ],
-            "img": "corbeau.png"
-        },
-                {
-            "id": 3,
-            "name" : "fennec",
-            "points": [
-                4, 9, 16
-            ],
-            "img": "fennec.png"
-        },
-                        {
-            "id": 4,
-            "name" : "abeille",
-            "points": [
-                8, 18
-            ],
-            "img": "abeille.png"
-        },
-                        {
-            "id": 5,
-            "name" : "ecureuil",
-            "points": [
-                4, 9, 15
-            ],
-            "img": "ecureuil.png"
-        },
-                        {
-            "id": 6,
-            "name" : "loutre",
-            "points": [
-                5, 10, 16
-            ],
-            "img": "loutre.png"
-        },
-                        {
-            "id": 7,
-            "name" : "marlin",
-            "points": [
-                5, 11, 18
-            ],
-            "img": "marlin.png"
-        }
-    ]
+  "cards": [
+    {
+      "id": 0,
+      "name": "ara",
+      "points": [4, 9, 14],
+      "img": "ara.png"
+    },
+    {
+      "id": 1,
+      "name": "canard",
+      "points": [2, 4, 8, 13],
+      "img": "canard.png"
+    },
+    {
+      "id": 2,
+      "name": "corbeau",
+      "points": [4, 9],
+      "img": "corbeau.png"
+    },
+    {
+      "id": 3,
+      "name": "fennec",
+      "points": [4, 9, 16],
+      "img": "fennec.png"
+    },
+    {
+      "id": 4,
+      "name": "abeille",
+      "points": [8, 18],
+      "img": "abeille.png"
+    },
+    {
+      "id": 5,
+      "name": "ecureuil",
+      "points": [4, 9, 15],
+      "img": "ecureuil.png"
+    },
+    {
+      "id": 6,
+      "name": "loutre",
+      "points": [5, 10, 16],
+      "img": "loutre.png"
+    },
+    {
+      "id": 7,
+      "name": "marlin",
+      "points": [5, 11, 18],
+      "img": "marlin.png"
+    }
+  ]
 }

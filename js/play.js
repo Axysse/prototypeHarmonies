@@ -29,11 +29,9 @@ function addHexEventListeners() {
   allHex.forEach((hex) => {
     hex.addEventListener("click", () => {
       if (selectedToken) {
-        
         if (checkAvailable(hex, selectedToken)) {
           placeToken(selectedToken, hex);
         }
-       
       } else {
         console.log("Sélectionne d'abord un jeton !");
       }
@@ -52,6 +50,7 @@ function placeToken(token, hex) {
     playerPickCard = true;
     console.log(playerPickCard)
     playerPick = true;
+    piocheOne();
   }
 }
 

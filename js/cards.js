@@ -71,15 +71,19 @@ function piocheCard() {
 }
 
 function piocheOne() {
+  if(piocheDiv.children.length <= 4){
   let cardDiv = document.createElement("div");
   cardDiv.classList.add("cardDiv", "h-[18vh]", "w-[12%]");
   piocheDiv.appendChild(cardDiv);
   let randomCard = getRandomCard();
   const cardImg = document.createElement("img");
-  cardImg.src = `../assets/img/cards/${randomCard}`;
-  cardImg.alt = randomCard;
+  cardImg.src = `../assets/img/cards/${randomCard.name}.png`;
+  cardImg.alt = randomCard.name;
   cardImg.classList.add("h-[18vh]", "w-[75%]", "card");
   cardDiv.appendChild(cardImg);
+  } else {
+    return;
+  }
 }
 
 async function startGame() {
