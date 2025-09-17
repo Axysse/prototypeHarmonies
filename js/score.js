@@ -4,7 +4,7 @@ function addCube(card) {
     "flex",
     "gap-1",
     "absolute",
-    "bottom-1",
+    "top-1",
     "left-1"
   );
   let points = card.dataset.points;
@@ -13,7 +13,7 @@ function addCube(card) {
   let pointsArray = JSON.parse(points);
   pointsArray.forEach((element) => {
     const newCube = document.createElement("div");
-    newCube.classList.add("w-8", "h-8", "bg-orange-400");
+    newCube.classList.add("w-4", "h-4", "bg-orange-400");
     cubesContainer.appendChild(newCube);
   });
   card.appendChild(cubesContainer);
