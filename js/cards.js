@@ -42,6 +42,7 @@ function piocheCard() {
       cardImg.alt = randomCard.name;
       cardImg.classList.add("h-[18vh]", "w-[75%]", "card");
       child.appendChild(cardImg);
+      child.dataset.points = JSON.stringify(randomCard.points);
 
       child.addEventListener("click", () => {
         if (playerPickCard === false) {
@@ -58,6 +59,7 @@ function piocheCard() {
         newImg.src = childImg.src;
         newCard.appendChild(newImg);
         handCard.appendChild(newCard);
+        newCard.dataset.points = child.dataset.points;
 
         addCube(newCard)
 
@@ -83,6 +85,7 @@ function piocheOne() {
   cardImg.alt = randomCard.name;
   cardImg.classList.add("h-[18vh]", "w-[75%]", "card");
   cardDiv.appendChild(cardImg);
+  cardDiv.dataset.points = JSON.stringify(randomCard.points);
 
     cardDiv.addEventListener("click", () => {
         if (playerPickCard === false) {
@@ -98,6 +101,7 @@ function piocheOne() {
         newImg.src = cardImg.src;
         newCard.appendChild(newImg);
         handCard.appendChild(newCard);
+        newCard.dataset.points = cardDiv.dataset.points;
 
         addCube(newCard)
 
