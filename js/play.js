@@ -63,13 +63,16 @@ function checkAvailable(hex, selectedToken) {
   }
   // --- Jeton gris ---
   if (selectedToken.classList.contains("greyToken")) {
-    if (hexChildren.length === 0) {
+    if (hexChildren.length >= 3) {
+      console.log("L'empilage de jetons gris est limité à 3.");
+      return false;
+    } else if(hexChildren.length === 0) {
       console.log("Les jetons gris peuvent être posés sur un hexagone vide.");
       return true;
     }
     if (
       (hexChildren.length === 1 || hexChildren.length === 2) &&
-      hexChildren[0].classList.contains("greyToken") &&
+      hexChildren[0].classList.contains("greyToken") ||
       hexChildren[1].classList.contains("greyToken")
     ) {
       console.log("Empilage de jetons gris autorisé.");
