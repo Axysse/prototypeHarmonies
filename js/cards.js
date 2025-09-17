@@ -59,6 +59,8 @@ function piocheCard() {
         newCard.appendChild(newImg);
         handCard.appendChild(newCard);
 
+        addCube(newCard)
+
         child.remove(childImg);
         
         playerPickCard = false;
@@ -81,6 +83,30 @@ function piocheOne() {
   cardImg.alt = randomCard.name;
   cardImg.classList.add("h-[18vh]", "w-[75%]", "card");
   cardDiv.appendChild(cardImg);
+
+    cardDiv.addEventListener("click", () => {
+        if (playerPickCard === false) {
+          alert("non! Tu as déjà pioché ce tour!");
+          console.log(playerPickCard);
+          return;
+        }
+        const cardImg = cardDiv.querySelector("img");
+        newCard = document.createElement("div");
+        newCard.classList.add("h-[18vh]", "w-[20%]", "card");
+        newImg = document.createElement("img");
+        newImg.classList.add("h-[18vh]", "w-[60%]", "card");
+        newImg.src = cardImg.src;
+        newCard.appendChild(newImg);
+        handCard.appendChild(newCard);
+
+        addCube(newCard)
+
+        cardDiv.remove(cardImg);
+        
+        playerPickCard = false;
+        console.log(playerPickCard);
+      });
+
   } else {
     return;
   }
