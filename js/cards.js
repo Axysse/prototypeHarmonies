@@ -53,9 +53,9 @@ function piocheCard() {
         const childImg = child.querySelector("img");
         console.log(childImg.src);
         newCard = document.createElement("div");
-        newCard.classList.add("h-[18vh]", "w-[20%]", "card");
+        newCard.classList.add("h-[18vh]", "w-[12%]", "card");
         newImg = document.createElement("img");
-        newImg.classList.add("h-[18vh]", "w-[60%]", "card");
+        newImg.classList.add("h-[18vh]", "w-[100%]", "card");
         newImg.src = childImg.src;
         newCard.appendChild(newImg);
         handCard.appendChild(newCard);
@@ -77,13 +77,13 @@ function piocheCard() {
 function piocheOne() {
   if(piocheDiv.children.length <= 4){
   let cardDiv = document.createElement("div");
-  cardDiv.classList.add("cardDiv", "h-[18vh]", "w-[12%]");
+  cardDiv.classList.add("cardDiv", "h-[18vh]", "w-[10%]");
   piocheDiv.appendChild(cardDiv);
   let randomCard = getRandomCard();
   const cardImg = document.createElement("img");
   cardImg.src = `../assets/img/cards/${randomCard.name}.png`;
   cardImg.alt = randomCard.name;
-  cardImg.classList.add("h-[18vh]", "w-[75%]", "card");
+  cardImg.classList.add("h-[18vh]", "w-[100%]", "card");
   cardDiv.appendChild(cardImg);
   cardDiv.dataset.points = JSON.stringify(randomCard.points);
 
@@ -95,9 +95,9 @@ function piocheOne() {
         }
         const cardImg = cardDiv.querySelector("img");
         newCard = document.createElement("div");
-        newCard.classList.add("h-[18vh]", "w-[20%]", "card");
+        newCard.classList.add("h-[18vh]", "w-[100%]", "card");
         newImg = document.createElement("img");
-        newImg.classList.add("h-[18vh]", "w-[60%]", "card");
+        newImg.classList.add("h-[18vh]", "w-[100%]", "card");
         newImg.src = cardImg.src;
         newCard.appendChild(newImg);
         handCard.appendChild(newCard);

@@ -13,7 +13,7 @@ function addCube(card) {
   let pointsArray = JSON.parse(points);
   pointsArray.forEach((element) => {
     const newCube = document.createElement("div");
-    newCube.classList.add("w-4", "h-4", "bg-orange-400");
+    newCube.classList.add("w-4", "h-4", "bg-orange-400", "border-2", "border-black");
     cubesContainer.appendChild(newCube);
   });
   card.appendChild(cubesContainer);
