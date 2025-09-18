@@ -47,6 +47,12 @@
       "name": "marlin",
       "points": [5, 11, 18],
       "img": "marlin.png"
+    },
+    {
+      "id": 8,
+      "name": "pingouin",
+      "points": [4, 10, 16],
+      "img": "pingouin.png"
     }
   ]
 }
