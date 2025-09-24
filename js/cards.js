@@ -53,18 +53,18 @@ function piocheCard() {
         const childImg = child.querySelector("img");
         console.log(childImg.src);
         newCard = document.createElement("div");
-        newCard.classList.add("h-[18vh]", "w-[12%]", "card");
+        newCard.classList.add("h-[18vh]", "card");
         newImg = document.createElement("img");
-        newImg.classList.add("h-[18vh]", "w-[100%]", "card");
+        newImg.classList.add("h-[18vh]", "card");
         newImg.src = childImg.src;
         newCard.appendChild(newImg);
         handCard.appendChild(newCard);
         newCard.dataset.points = child.dataset.points;
 
-        addCube(newCard)
+        addCube(newCard);
 
         child.remove(childImg);
-        
+
         playerPickCard = false;
         console.log(playerPickCard);
       });
@@ -75,42 +75,41 @@ function piocheCard() {
 }
 
 function piocheOne() {
-  if(piocheDiv.children.length <= 4){
-  let cardDiv = document.createElement("div");
-  cardDiv.classList.add("cardDiv", "h-[18vh]", "w-[10%]");
-  piocheDiv.appendChild(cardDiv);
-  let randomCard = getRandomCard();
-  const cardImg = document.createElement("img");
-  cardImg.src = `../assets/img/cards/${randomCard.name}.png`;
-  cardImg.alt = randomCard.name;
-  cardImg.classList.add("h-[18vh]", "w-[100%]", "card");
-  cardDiv.appendChild(cardImg);
-  cardDiv.dataset.points = JSON.stringify(randomCard.points);
+  if (piocheDiv.children.length <= 4) {
+    let cardDiv = document.createElement("div");
+    cardDiv.classList.add("cardDiv", "h-[18vh]", "w-[10%]");
+    piocheDiv.appendChild(cardDiv);
+    let randomCard = getRandomCard();
+    const cardImg = document.createElement("img");
+    cardImg.src = `../assets/img/cards/${randomCard.name}.png`;
+    cardImg.alt = randomCard.name;
+    cardImg.classList.add("h-[18vh]", "w-[100%]", "card");
+    cardDiv.appendChild(cardImg);
+    cardDiv.dataset.points = JSON.stringify(randomCard.points);
 
     cardDiv.addEventListener("click", () => {
-        if (playerPickCard === false) {
-          alert("non! Tu as déjà pioché ce tour!");
-          console.log(playerPickCard);
-          return;
-        }
-        const cardImg = cardDiv.querySelector("img");
-        newCard = document.createElement("div");
-        newCard.classList.add("h-[18vh]", "w-[100%]", "card");
-        newImg = document.createElement("img");
-        newImg.classList.add("h-[18vh]", "w-[100%]", "card");
-        newImg.src = cardImg.src;
-        newCard.appendChild(newImg);
-        handCard.appendChild(newCard);
-        newCard.dataset.points = cardDiv.dataset.points;
-
-        addCube(newCard)
-
-        cardDiv.remove(cardImg);
-        
-        playerPickCard = false;
+      if (playerPickCard === false) {
+        alert("non! Tu as déjà pioché ce tour!");
         console.log(playerPickCard);
-      });
+        return;
+      }
+      const cardImg = cardDiv.querySelector("img");
+      newCard = document.createElement("div");
+      newCard.classList.add("h-[18vh]", "card");
+      newImg = document.createElement("img");
+      newImg.classList.add("h-[18vh]", "w-[100%]", "card");
+      newImg.src = cardImg.src;
+      newCard.appendChild(newImg);
+      handCard.appendChild(newCard);
+      newCard.dataset.points = cardDiv.dataset.points;
 
+      addCube(newCard);
+
+      cardDiv.remove(cardImg);
+
+      playerPickCard = false;
+      console.log(playerPickCard);
+    });
   } else {
     return;
   }

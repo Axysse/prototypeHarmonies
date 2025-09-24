@@ -1,5 +1,6 @@
 const allHex = board.querySelectorAll(".hex");
 let selectedToken = null;
+let valide = []
 
 function addTokenEventListeners(tokens) {
   tokens.forEach((token) => {
@@ -51,6 +52,8 @@ function placeToken(token, hex) {
     console.log(playerPickCard)
     playerPick = true;
     piocheOne();
+    checkConditionsScore();
+    getPosition()
   }
 }
 
@@ -58,6 +61,22 @@ function checkAvailable(hex, selectedToken) {
   let hexChildren = hex.querySelectorAll("div");
   if (hexChildren.length === 0) {
     console.log("ba y'a rien");
+      if(selectedToken.classList.contains("yellowToken")){
+        console.log("on fait un champ")
+        valide.push("champ")
+        hex.setAttribute("type", "champ")
+        console.log(valide)
+      } else if(selectedToken.classList.contains("blueToken")){
+        console.log("on fait une riviere")
+        valide.push("riviere")
+        hex.setAttribute("type", "riviere")
+        console.log(valide)
+      } else if(selectedToken.classList.contains("greenToken")){
+        console.log("on fait un buisson")
+        valide.push("buisson")
+        hex.setAttribute("type", "buisson")
+        console.log(valide)
+      }
     return true;
   }
   // --- Jeton gris ---
@@ -98,7 +117,10 @@ function checkAvailable(hex, selectedToken) {
         hexChildren[0].classList.contains("redToken") ||
         hexChildren[0].classList.contains("brownToken"))
     ) {
-      console.log("On fait une maison.");
+      console.log("On fait une maison.");      
+      valide.push("maison")
+      hex.setAttribute("type", "maison")
+      console.log(valide)
       return true;
     }
   }
@@ -122,12 +144,18 @@ function checkAvailable(hex, selectedToken) {
       hexChildren[0].classList.contains("brownToken")
     ) {
       console.log("p'tit abre validé");
+      valide.push("petitArbre")
+      hex.setAttribute("type", "petitArbre")
+      console.log(valide)
       return true;
     } else if (
       hexChildren.length === 2 &&
       hexChildren[1].classList.contains("brownToken")
     ) {
       console.log("grand abre validé");
+      valide.push("grandArbre")
+      hex.setAttribute("type", "grandArbre")
+      console.log(valide)
       return true;
     } else {
       console.log("Placement d'un jeton vert non autorisé ici.");

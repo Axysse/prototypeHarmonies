@@ -4,19 +4,28 @@
       "id": 0,
       "name": "ara",
       "points": [4, 9, 14],
-      "img": "ara.png"
+      "img": "ara.png",
+      "condition": [
+        "petitArbre"
+      ]
     },
     {
       "id": 1,
       "name": "canard",
       "points": [2, 4, 8, 13],
-      "img": "canard.png"
+      "img": "canard.png",
+      "condition": [
+        "riviere"
+      ]
     },
     {
       "id": 2,
       "name": "corbeau",
       "points": [4, 9],
-      "img": "corbeau.png"
+      "img": "corbeau.png",
+      "condition": [
+        "champ"
+      ]
     },
     {
       "id": 3,
@@ -28,31 +37,97 @@
       "id": 4,
       "name": "abeille",
       "points": [8, 18],
-      "img": "abeille.png"
+      "img": "abeille.png",
+      "condition": [
+        "petitArbre"
+      ]
     },
     {
       "id": 5,
       "name": "ecureuil",
       "points": [4, 9, 15],
-      "img": "ecureuil.png"
+      "img": "ecureuil.png",
+      "condition": [
+        "maison"
+      ]
     },
     {
       "id": 6,
       "name": "loutre",
       "points": [5, 10, 16],
-      "img": "loutre.png"
+      "img": "loutre.png",
+      "condition": [
+        "riviere"
+      ]
     },
     {
       "id": 7,
       "name": "marlin",
       "points": [5, 11, 18],
-      "img": "marlin.png"
+      "img": "marlin.png",
+      "condition": [
+        "grandArbre"
+      ]
     },
     {
       "id": 8,
       "name": "pingouin",
       "points": [4, 10, 16],
       "img": "pingouin.png"
+    },
+    {
+      "id": 9,
+      "name": "lapin",
+      "points": [5, 10, 17],
+      "img": "lapin.png"
+    },
+    {
+      "id": 10,
+      "name": "lama",
+      "points": [5, 12],
+      "img": "lama.png"
+    },
+    {
+      "id": 11,
+      "name": "lezard",
+      "points": [5, 10, 16],
+      "img": "lezard.png"
+    },
+    {
+      "id": 12,
+      "name": "crocodile",
+      "points": [4, 9, 15],
+      "img": "crocodile.png"
+    },
+    {
+      "id": 13,
+      "name": "koala",
+      "points": [3, 6, 10, 15],
+      "img": "koala.png"
+    },
+    {
+      "id": 14,
+      "name": "paon",
+      "points": [5, 10, 17],
+      "img": "paon.png"
+    },
+    {
+      "id": 15,
+      "name": "herisson",
+      "points": [5, 12],
+      "img": "herisson.png"
+    },
+    {
+      "id": 16,
+      "name": "rat",
+      "points": [5, 10, 17],
+      "img": "rat.png"
+    },
+    {
+      "id": 17,
+      "name": "limande",
+      "points": [4, 10, 16],
+      "img": "limande.png"
     }
   ]
 }
